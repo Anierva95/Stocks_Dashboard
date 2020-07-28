@@ -1,0 +1,10 @@
+.Header__Block {
+    background-color: greenyellow;
+    height: 15vh;
+}
+
+.Header__Title {
+    font-size: 7.5rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
