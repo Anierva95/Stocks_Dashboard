@@ -10,7 +10,12 @@ export default function Header(props) {
             <input className="Header__Search" value={search} onChange={e => setSearch(e.target.value)} />
             <button onClick={() => fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=IBM&apikey=demo")
   .then(response => response.json())
-  .then(data => console.log(data))}>Search!</button>
+  .then(data => {
+      for (let week in data["Weekly Time Series"]) {
+          console.log(week);
+      }
+      console.log(Object.keys(data["Weekly Time Series"]))
+  })}>Search!</button>
         </div>
     )
 }
