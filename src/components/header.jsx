@@ -8,6 +8,9 @@ export default function Header(props) {
         <div className="Header__Block">
             <h1 className="Header__Title">Stocks Dashboard</h1>
             <input className="Header__Search" value={search} onChange={e => setSearch(e.target.value)} />
+            <button onClick={() => fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=IBM&apikey=demo")
+  .then(response => response.json())
+  .then(data => console.log(data))}>Search!</button>
         </div>
     )
 }
