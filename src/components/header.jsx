@@ -13,9 +13,11 @@ export default function Header(props) {
   .then(response => response.json())
   .then(data => {
       const openArr = [];
-      for (let week in data["Time Series (Daily)"]) {
-          openArr.push(data["Time Series (Daily)"][week]["1. open"])
-      }
+      let lastDay = Object.keys(data["Time Series (Daily)"])[0];
+      console.log(lastDay)
+      for (let price in data["Time Series (Daily)"][lastDay]) {
+          openArr.push(data["Time Series (Daily)"][lastDay][price])
+;      }
       setOpen(openArr);
       })}>Search!</button>
         </div>
