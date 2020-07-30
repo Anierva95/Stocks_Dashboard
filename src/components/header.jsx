@@ -8,14 +8,14 @@ export default function Header(props) {
         <div className="Header__Block">
             <h1 className="Header__Title">Stocks Dashboard</h1>
             <input className="Header__Search" value={search} onChange={e => setSearch(e.target.value)} />
-            <button onClick={() => fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=IBM&apikey=demo")
+            <button onClick={() => fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&outputsize=compact&apikey=90DCTUW9U71JIZB4")
   .then(response => response.json())
   .then(data => {
-      for (let week in data["Weekly Time Series"]) {
-          console.log(week);
+    //   console.log(data["Time Series (Daily)"]);
+      for (let week in data["Time Series (Daily)"]) {
+          console.log(data["Time Series (Daily)"][week]["1. open"])
       }
-      console.log(Object.keys(data["Weekly Time Series"]))
-  })}>Search!</button>
+      })}>Search!</button>
         </div>
     )
 }
