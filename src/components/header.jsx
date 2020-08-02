@@ -5,6 +5,9 @@ import { useState } from 'react';
 export default function Header(props) {
     const [search, setSearch] = useState("");
     const [open, setOpen] = useState([]);
+
+    const hasStocks = () => {
+    }
     return (
         <div className="Header__Block">
             <h1 className="Header__Title">Stocks Dashboard</h1>
@@ -21,6 +24,8 @@ export default function Header(props) {
                     }
                     setOpen(openArr);
                 })}>Search!</button>
+
+                {hasStocks}
         </div>
     )
 }
