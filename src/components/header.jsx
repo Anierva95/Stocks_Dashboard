@@ -9,7 +9,7 @@ export default function Header(props) {
         <div className="Header__Block">
             <h1 className="Header__Title">Stocks Dashboard</h1>
             <input className="Header__Search" value={search} onChange={e => setSearch(e.target.value)} />
-            <button onClick={() => fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&outputsize=compact&apikey=90DCTUW9U71JIZB4")
+            <button className="Header__Search__Button" onClick={() => fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&outputsize=compact&apikey=90DCTUW9U71JIZB4")
                 .then(response => response.json())
                 .then(data => {
                     const openArr = [];
