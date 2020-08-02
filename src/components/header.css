@@ -19,6 +19,13 @@
     font-size: 7rem;
     left: 50%;
     transform: translateX(-50%);
+    height: 4rem;
+    top: 25rem;
+    width: 10%;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: 2rem;
+}
 }
 
 .Header__Search__Button {
