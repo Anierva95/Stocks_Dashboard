@@ -7,6 +7,9 @@ export default function Header(props) {
     const [open, setOpen] = useState([]);
 
     const hasStocks = () => {
+        open.map(el => {
+            return <h1 className="Header__Stock">{el}</h1>
+        })
     }
     return (
         <div className="Header__Block">
