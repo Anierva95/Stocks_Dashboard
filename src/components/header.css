@@ -39,7 +39,7 @@
 }
 
 .Header__Search__Button:hover {
-    opacity: .85;
+    opacity: .9;
 }
 
 @media (max-width: 1100px) {

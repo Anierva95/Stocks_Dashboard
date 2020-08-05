@@ -8,7 +8,10 @@ export default function Header(props) {
 
     const hasStocks = () => {
         open.map(el => {
-            return <h1 className="Header__Stock">{el}</h1>
+            return (
+            <div>
+            <h1 className="Header__Stock">{el}</h1>
+            </div>);
         })
     }
     return (
